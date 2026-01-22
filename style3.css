@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 150vh;
+    color: #f2f2f2;
+    background: url('https://png.pngtree.com/thumb_back/fh260/background/20241224/pngtree-compass-and-map-of-the-world-symbolizing-travel-adventure-exploration-with-image_16851966.jpg')
+        no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+
+header {
+    text-align: center;
+    padding: 35px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+header h1 {
+    font-size: 2.8em;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+header p {
+    font-size: 1.05em;
+    opacity: 0.9;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    padding: 18px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+}
+
+nav a {
+    text-decoration: none;
+    padding: 8px 14px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.4s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 25px;
+    padding: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+
+aside {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 22px;
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+}
+
+aside h3,
+aside h4 {
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+aside p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+aside ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+aside li {
+    margin: 8px 0;
+    font-size: 0.9em;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scroll-behavior: smooth;
+}
+
+
+.card {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    transition: transform 0.35s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 126, 95, 0.3),
+        rgba(0, 210, 255, 0.3)
+    );
+    opacity: 0.35;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover::after {
+    opacity: 0.75;
+}
+
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+
+.card p {
+    padding: 12px;
+    font-weight: 600;
+    font-size: 0.9em;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+
+.card:hover {
+    transform: translateY(-12px) scale(1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+
+footer {
+    text-align: center;
+    padding: 18px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 25px;
+    backdrop-filter: blur(6px);
+}
+
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 0, 150, 0.1),
+        rgba(0, 200, 255, 0.1)
+    );
+    z-index: 1;
+}
+
+
+.card:hover p {
+    color: #ffeaa7;
+}
